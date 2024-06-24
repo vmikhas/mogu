@@ -1,5 +1,59 @@
-.intro {
-    font-family: $Oswald;
-    font-size: 60px;
-    color: red;
+.intro__container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 23px;
+	margin-top: 58px;
+}
+
+.tracker {
+	margin: 25px 0 0 24px;
+}
+
+.tracker__title {
+	font-family: $Oswald;
+	font-weight: 500;
+	font-size: 90px;
+	line-height: 89%;
+	letter-spacing: -0.02em;
+	color: $blue;
+}
+
+.tracker__desc {
+	padding-top: 23px;
+
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 164%;
+	letter-spacing: -0.01em;
+	color: $blue;
+}
+
+.tracker__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding-top: 64px;
+}
+
+.tracker__item {
+	padding: 0 16px;
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 300%;
+	letter-spacing: 0.01em;
+	text-align: center;
+	color: $blue;
+
+	background-color: $smoky-white;
+	border-radius: 12px;
+}
+
+.user {
+	background-color: $blue;
+}
+
+.user__item {
+	width: 100px;
+	height: 100px;
 }

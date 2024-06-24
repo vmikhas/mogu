@@ -1,12 +1,12 @@
 import './style.scss';
 
-import Intro from './intro/Intro';
 import Header from './header/Header';
+import Intro from './intro/Intro';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <Intro />
     </div>
   );
