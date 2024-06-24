@@ -1,0 +1,28 @@
+@include font-face(
+  "Inter",
+  400,
+  normal,
+  "./../assest/fonts/Inter-Regular.woff2",
+  "./../assest/fonts/Inter-Regular.woff"
+);
+@include font-face(
+  "Inter",
+  500,
+  normal,
+  "./../assest/fonts/Inter-Medium.woff2",
+  "./../assest/fonts/Inter-Medium.woff"
+);
+@include font-face(
+  "Oswald",
+  400,
+  normal,
+  "./../assest/fonts/Oswald-Regular.woff2",
+  "./../assest/fonts/Oswald-Regular.woff"
+);
+@include font-face(
+  "Oswald",
+  500,
+  normal,
+  "./../assest/fonts/Oswald-Medium.woff2",
+  "./../assest/fonts/Oswald-Medium.woff"
+);
