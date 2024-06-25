@@ -5,7 +5,7 @@ import avatar_4 from "./../assest/images/avatar_4.png";
 import plus from "./../assest/images/plus.png";
 
 export default function Intro() {
-  const icons = [
+    const icons = [
 		avatar_1,
 		avatar_2,
 		avatar_3,
@@ -36,11 +36,11 @@ export default function Intro() {
 				</div>
 				<div className="intro__user user">
 					<p className="user__text">Совместная работа</p>
-					<p className="user__desc">Это ваш милейший коллега</p>
+					<p className="user__desc user__desc--colleague">Это ваш милейший коллега</p>
 					<ul className="user__list">
-						{icons.map((icon) => <li className="user__item"><img className="user__icon" src={icon} alt=""/></li>)}
+						{icons.map((icon) => <li className="user__item"><a className="user__link" href="#1"><img className="user__icon" src={icon} alt=""/></a></li>)}
 					</ul>
-					<p className="user__desc">А это вы</p>
+					<p className="user__desc user__desc--me">А это вы</p>
 				</div>
 			</div>
     </section>
