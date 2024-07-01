@@ -18,8 +18,8 @@ export default function Promo () {
     <section className="promo">
       <div className="promo__container">
         <ul className="promo__list">
-	      {images.map((image,id) => <li className={`promo__item promo__item--${id}`} key={'item-'+id}><img className="promo__image" src={image} alt=""/></li>)}
-	    </ul>
+	        {images.map((image,id) => <li className={`promo__item promo__item--${id}`} key={'item-'+id}><img className="promo__image" src={image} alt=""/></li>)}
+	      </ul>
       </div>
     </section>
   );
