@@ -1,27 +1,51 @@
-.order__container {
+.order {
+  &__container {
     margin-top: 24px;
-}
+  }
 
-.order__wrapper {
+  &__wrapper {
     font-weight: 400;
     @include option(font-size, 44px);
     line-height: 118%;
     letter-spacing: 0em;
     text-align: center;
     color: $heavenly;
-
+  
     background-color: $lilac;
     border-radius: 30px;
-}
-
-.order__title {
+  }
+  
+  &__title {
+    padding: 31px 0 0;
+  
     font-family: $Oswald;
     font-weight: 400;
     font-size: 78px;
     line-height: 103%;
     letter-spacing: -0.05em;
     text-align: center;
-    @include MOBILE {
-        display: none;
-    }
+  //   @include MOBILE {
+  //     display: none;
+  //   }
+  }
+
+  &__desc {
+    padding: 21px 177px 24px;
+  }
+
+  &__image {
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 307px);
+    justify-content: center;
+    align-items: center;
+    column-gap: 85px;
+    padding: 25px 0 40px;
+  }
 }
+
+
+
