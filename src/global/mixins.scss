@@ -1,9 +1,19 @@
 @mixin font-face($font-family, $font-weight, $font-style, $furlwoff2, $furlwoff) {
-    @font-face {
-      font-family: $font-family;
-      font-weight: $font-weight;
-      font-style: $font-style;
-      src: url($furlwoff2) format('woff2'), url($furlwoff) format('woff');
-      font-display: swap;
-    }
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    src: url($furlwoff2) format('woff2'), url($furlwoff) format('woff');
+    font-display: swap;
   }
+}
+ 
+@mixin option($n, $v, $vm:$v) {
+  //TODO описать свойства для адаптивности
+  @include DESKTOP {
+    #{$n}: $v;
+  };
+  @include MOBILE {
+    #{$n}: $vm;
+  };
+}

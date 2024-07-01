@@ -1,43 +1,45 @@
 .promo {
     
-    &__container {
-        margin-top: 126px;
+  &__container {
+    margin-top: 126px;  
+  
+    background-color: $signal-black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
 
-        background-color: $signal-black;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 295px 0 320px;
+  }  
+
+  &__item {
+    &--0 {
+      width: 456px;
+      height: 414px;
     }
 
-    &__list {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 295px 0 320px;
+    &--1 {
+      width: 272px;
+      height: 325px;
     }
 
-    &__item {
-        &_0 {
-            width: 456px;
-            height: 414px;
-        }
-        &_1 {
-            width: 272px;
-            height: 325px;
-        }
-        &_2 {
-            width: 239px;
-            height: 480px;
-        }
-        &_3 {
-            width: 216px;
-            height: 287px;
-        }
-
+    &--2 {
+      width: 239px;
+      height: 480px;
     }
 
-    &__image {
-        width: 100%;
-    }
+    &--3 {
+      width: 216px;
+      height: 287px;
+    }  
+  }  
+
+  &__image {
+    width: 100%;
+  }
 }
 
 
