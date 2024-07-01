@@ -38,7 +38,7 @@ export default function Intro() {
 					<p className="user__text">Совместная работа</p>
 					<p className="user__desc user__desc--colleague">Это ваш милейший коллега</p>
 					<ul className="user__list">
-						{icons.map((icon) => <li className="user__item"><a className="user__link" href="#1"><img className="user__icon" src={icon} alt=""/></a></li>)}
+						{icons.map((icon, id) => <li className="user__item" key={'item-'+id}><a className="user__link" href="#1"><img className="user__icon" src={icon} alt=""/></a></li>)}
 					</ul>
 					<p className="user__desc user__desc--me">А это вы</p>
 				</div>

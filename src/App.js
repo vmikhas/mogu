@@ -5,6 +5,7 @@ import Intro from './intro/Intro';
 import Promo from './promo/Promo';
 import Info from './info/Info';
 import Order from './order/Order';
+import Possibilities from './possibilities/Possibilities';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Promo />
       <Info />
       <Order />
+			<Possibilities />
     </div>
   );
 };

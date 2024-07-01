@@ -1,10 +1,6 @@
 import imac from "./../assest/images/imac.png";
 import hands from "./../assest/images/hands.png";
 
-// import { ReactComponent as Imac } from "./../assest/images/imac.png";
-// import { ReactComponent as  Hands} from "./../assest/images/hands.png";
-
-
 export default function Info() {
 
   return (

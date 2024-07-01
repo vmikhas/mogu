@@ -1,0 +1,63 @@
+.possibilities {
+	&__container {
+		margin-top: 23px;
+	}
+
+	&__list {
+		display: grid;
+    grid-template-columns: repeat(3, 32.3%);		column-gap: 20px;
+	}
+
+	&__item {
+		position: relative;
+
+		border-radius: 30px;
+
+		&--0 {
+			color: $black;
+
+			background-color: $bright-yellow;
+		}
+
+		&--1 {
+			background-color: $black;
+		}
+
+		&--2 {
+			color: $vanilla;
+
+			background-color: $gainsborough;
+		}
+	}
+
+	&__title {
+		padding: 24px 25px 0;
+
+		font-family: $Oswald;
+		font-weight: 400;
+		@include option (font-size, 78px);
+		line-height: 103%;
+		letter-spacing: -0.05em;
+	}
+
+	&__desc {
+		padding: 20px 24px 40px;
+
+		font-weight: 400;
+		@include option (font-size, 44px);
+		line-height: 118%;
+		letter-spacing: 0em;
+	}
+
+	&__image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -51.2%);
+		z-index: 2;
+
+		max-width: 584px;
+    width: calc(100% + 160px);
+    height: auto;
+	}
+}

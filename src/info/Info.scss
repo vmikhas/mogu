@@ -1,95 +1,96 @@
 .info {
-    margin-top: -37px;
-    padding-top: 64px;
+  margin-top: -37px;
+  padding-top: 64px;
 
-    background-color: $white;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+  background-color: $white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .info__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 23px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 23px;
 }
 
 .info__item {
-    border-radius: 30px;
+  border-radius: 30px;
 
-    &--search {
-        position: relative;
+  &--search {
+    position: relative;
 
-        padding-top: 78px;
+    padding-top: 78px;
 
-        background-color: $sea-shell;
+    background-color: $sea-shell;
 
-        &::before {
-            content: "";
-            display: block;
-            width: 350px;
-            height: 350px;
+    &::before {
+      content: "";
+      display: block;
+      width: 350px;
+      height: 350px;
 
-            background-color: $light-mauve;
-            background-size: 350px 350px;
-            border-radius: 50%;
+      background-color: $light-mauve;
+      background-size: 350px 350px;
+      border-radius: 50%;
 
-            position: absolute;
-            top: 3%;
-            left: 23%;
-        }
+      position: absolute;
+      top: 3%;
+      left: 50%;
+			transform: translateX(-50%);
     }
+  }
 
-    &--facilities {
-        background-color: $black;
-    }
+  &--facilities {
+    background-color: $black;
+  }
 }
 
 .info__image {
-    &--search {
-        position: relative;
-        z-index: 2;
+  &--search {
+    position: relative;
+    z-index: 2;
 
-        width: 248px;
-        height: 242px;
-        margin: 0 auto;
-    }
+    width: 248px;
+    height: 242px;
+    margin: 0 auto;
+  }
 }
 
 .info__title {
-    font-family: $Oswald;
-    font-weight: 400;
-    font-size: 78px;
-    line-height: 103%;
-    letter-spacing: -0.05em;
-    text-align: center;
+  font-family: $Oswald;
+  font-weight: 400;
+  font-size: 78px;
+  line-height: 103%;
+  letter-spacing: -0.05em;
+  text-align: center;
 
-    &--search {
-        padding: 78px 0 0;
+  &--search {
+    padding: 78px 0 0;
 
-        color: $fern-green;
-    }
+    color: $fern-green;
+  }
 
-    &--facilities {
-        padding: 24px 0 0;
-        color: $white;
-    }
+  &--facilities {
+    padding: 24px 0 0;
+    color: $white;
+  }
 }
 
 .info__desc {
-    font-weight: 400;
-    font-size: 44px;
-    line-height: 118%;
-    letter-spacing: 0em;
-    text-align: center;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 118%;
+  letter-spacing: 0em;
+  text-align: center;
 
-    &--search {
-        padding: 20px 0 40px;
+  &--search {
+    padding: 20px 0 40px;
 
-        color: $fern-green;
-    }
+    color: $fern-green;
+  }
 
-    &--facilities {
-        padding: 21px 0 23px;
-        color: $white;
-    }
+  &--facilities {
+    padding: 21px 0 23px;
+    color: $white;
+  }
 }
