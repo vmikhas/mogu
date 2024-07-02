@@ -6,16 +6,21 @@ import Promo from './promo/Promo';
 import Info from './info/Info';
 import Order from './order/Order';
 import Possibilities from './possibilities/Possibilities';
+import Doodle from './doodle/Doodle';
+import Create from './create/Create';
+import { infoContent, infoCreate, infoOrder, introContent } from './constants/copyright';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Intro />
+      <Intro {...introContent} />
       <Promo />
-      <Info />
-      <Order />
+      <Info {...infoContent} />
+      <Order {...infoOrder} />
 			<Possibilities />
+      <Doodle />
+      <Create {...infoCreate} />
     </div>
   );
 };

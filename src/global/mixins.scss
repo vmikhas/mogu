@@ -8,13 +8,18 @@
   }
 }
  
-@mixin option($n, $v, $vm:$v) {
+@mixin option($n, $v, $vm:$v, $vt:$vm, $vmin:$v) {
   //TODO описать свойства для адаптивности
   @include DESKTOP {
     #{$n}: $v;
   };
-  
+  @include MIN-DESKTOP {
+    #{$n}: $vmin;
+  };
   @include MOBILE {
     #{$n}: $vm;
+  };
+  @include TABLET {
+    #{$n}: $vt;
   };
 }

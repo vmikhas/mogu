@@ -1,0 +1,13 @@
+.doodle {
+  &__container {
+    padding: 166px 0 199px;
+  }
+
+  &__image {
+    width: 985px;
+    height: 195px;
+    margin: 0 auto;
+
+    transform: translateX(-1.7%);
+  }
+}

@@ -1,0 +1,88 @@
+.create {
+  padding: 64px 0 0;
+  background-color: $timber-wolf;
+
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 66.7%;
+
+    background-color: $light-silver;
+
+    border-radius: 30px;
+  }
+
+  &__box {
+    padding: 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__button {
+    height: 48px;
+    padding: 0 17px;
+
+    font-weight: 500;
+    // font-size: 16px;
+    @include option (font-size, 16px);
+    line-height: 300%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $grayish-green;
+
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    &_active {
+      color: $black;
+
+      background-color: $bright-yellow;
+    }
+
+    &:disabled {
+      padding: 0 12px;
+      
+      color: $gray-neutral;
+
+      background-color: $ashen;
+    }
+  }
+
+  &__title {
+    padding: 33px 0 0;
+
+    font-weight: 500;
+    // font-size: 32px;
+    @include option (font-size, 32px);
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: $black;
+  }
+
+  &__desc {
+    padding: 6px 0 0;
+
+    font-weight: 400;
+    // font-size: 22px;
+    @include option (font-size, 22px);
+    line-height: 164%;
+    letter-spacing: -0.01em;
+    color: $grayish-green;
+  }
+
+  &__inner {
+    margin: 8px;
+
+    background-color: $white;
+
+    border-radius: 25px;
+  }
+}

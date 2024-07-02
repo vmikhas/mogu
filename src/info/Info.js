@@ -1,21 +1,26 @@
+import parse from "html-react-parser";
 import imac from "./../assest/images/imac.png";
 import hands from "./../assest/images/hands.png";
 
-export default function Info() {
+export default function Info({ searchTitle, searchDesc, facilitiesTitle, facilitiesDesc }) {
 
   return (
     <section className="info">
       <div className="info__container container">
         <ul className="info__list">
-          <li className="info__item info__item--search">
-            <img className="info__image info__image--search" src={imac} alt=""/>
-            <h2 className="info__title info__title--search">Вся информация как на&nbsp;ладони</h2>
-            <p className="info__desc info__desc--search">единая строка поиска для всех проектов - где бы ни была задача, вы быстро ее найдете</p>
+          <li className="info__item info__item_search">
+            <div className="info__image info__image_search">
+              <img src={imac} alt=""/>
+            </div>
+            <h2 className="info__title info__title_search">{parse(searchTitle)}</h2>
+            <p className="info__desc info__desc_search">{searchDesc}</p>
           </li>
-          <li className="info__item info__item--facilities">
-            <h2 className="info__title info__title--facilities">Ничто не мешает полету&nbsp;мысли</h2>
-            <p className="info__desc info__desc--facilities">фиксируйте новые идеи в один клик, прикрепляйте файлы и подробные описания сути задач</p>
-            <img className="info__image" src={hands} alt=""/>
+          <li className="info__item info__item_facilities">
+            <h2 className="info__title info__title_facilities">{parse(facilitiesTitle)}</h2>
+            <p className="info__desc info__desc_facilities">{facilitiesDesc}</p>
+            <div className="info__image info__image_facilities">
+              <img src={hands} alt=""/>
+            </div>
           </li>
         </ul>
       </div>
