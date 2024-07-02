@@ -29,7 +29,7 @@ export default function Intro({ title, desc, userText, userCollegue, userDesc })
 					<ul className="intro__list">
 						{tags.map((tag) => <li className="intro__item">{tag}</li>)}
 					</ul>
-					<form className="intro__form" >
+					<form className="intro__form" action="#" method="POST">
 						<input 
 							className="intro__input"
 							type="email"
@@ -50,4 +50,4 @@ export default function Intro({ title, desc, userText, userCollegue, userDesc })
 			</div>
     </section>
   );
-}
+};

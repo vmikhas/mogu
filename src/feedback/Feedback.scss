@@ -1,0 +1,68 @@
+.feedback {
+	margin-top: -30px;
+
+	background-color: $white;
+
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+
+	&__container {
+		padding-top: 80px;
+	}
+
+	&__form {
+		max-width: 867px;
+		padding: 33px 64px;
+
+		background-color: $smoky-white;
+
+		border-radius: 30px;
+	}
+
+	&__form-group {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		padding: 0;
+
+		border: none;
+	}
+
+	&__title {
+		padding: 0 2px 39px;
+
+		font-family: $Oswald;
+		font-weight: 500;
+		@include option (font-size, 72px);
+		line-height: 111%;
+		letter-spacing: -0.03em;
+		color: $black;
+	}
+
+	&__input,
+	&__textarea {
+		padding: 0 24px;
+
+		font-weight: 400;
+		font-size: 28px;
+		line-height: 143%;
+		letter-spacing: 0em;
+		color: $black;
+
+		border: 2px solid $cadet-blue;
+		border-radius: 30px;
+
+		&::placeholder {
+			color: $cadet-blue;
+		}
+	}
+
+	&__input {
+		height: 100px;
+	}
+
+	&__textarea {
+
+	}
+}

@@ -65,10 +65,14 @@
 		font-size: 28px;
 		line-height: 143%;
 		letter-spacing: 0em;
-		color: $cadet-blue;
+		color: $blue;
 	
 		border: 2px solid $blue;
 		border-radius: 30px;
+
+		&::placeholder {
+			color: $cadet-blue;
+		}
 	}
 	
 	&__button {

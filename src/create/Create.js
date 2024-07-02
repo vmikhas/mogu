@@ -1,6 +1,8 @@
+import { useState } from "react";
 import camera from "./../assest/images/camera.png";
 
 export default function Create({ title, desc, text }) {
+	const [active, setActive] = useState(0);
   const items = [
     'Product marketing',
     'Growth marketing',
@@ -17,7 +19,7 @@ export default function Create({ title, desc, text }) {
             <ul className="create__list">
               {items.map((item,id) =>
                 <li className="create__item">
-                  <button className={`create__button create__button_${id}`} key={'item-'+id} type="button">{item}</button>
+                  <button className={`create__button ${id === active ? 'create__button_active' : ''} ${id === 3 || id === 4 ? 'create__button_disabled' : ''}`} key={'item-'+id} type="button" onClick={() => setActive(id)}>{item}</button>
                 </li>
               )}
             </ul>
@@ -25,7 +27,9 @@ export default function Create({ title, desc, text }) {
             <p className="create__desc">{desc}</p>
           </div>
           <div className="create__inner">
-            <img className="create__image" src={camera} alt="" />
+            <div className="create__image">
+							<img src={camera} alt="" />
+						</div>
             <p className="create__text">{text}</p>
           </div>
         </div>

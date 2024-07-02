@@ -1,5 +1,5 @@
 .create {
-  padding: 64px 0 0;
+  padding: 64px 0 130px;
   background-color: $timber-wolf;
 
   border-top-left-radius: 30px;
@@ -15,7 +15,7 @@
   }
 
   &__box {
-    padding: 24px;
+    padding: 24px 20px 0 24px;
   }
 
   &__list {
@@ -29,7 +29,6 @@
     padding: 0 17px;
 
     font-weight: 500;
-    // font-size: 16px;
     @include option (font-size, 16px);
     line-height: 300%;
     letter-spacing: 0.01em;
@@ -47,12 +46,14 @@
       background-color: $bright-yellow;
     }
 
-    &:disabled {
-      padding: 0 12px;
+    &_disabled {
+      padding: 0 11px;
       
       color: $gray-neutral;
 
       background-color: $ashen;
+
+			pointer-events: none;
     }
   }
 
@@ -60,7 +61,6 @@
     padding: 33px 0 0;
 
     font-weight: 500;
-    // font-size: 32px;
     @include option (font-size, 32px);
     line-height: 150%;
     letter-spacing: 0em;
@@ -71,7 +71,6 @@
     padding: 6px 0 0;
 
     font-weight: 400;
-    // font-size: 22px;
     @include option (font-size, 22px);
     line-height: 164%;
     letter-spacing: -0.01em;
@@ -85,4 +84,24 @@
 
     border-radius: 25px;
   }
+
+	&__image {
+		width: 480px;
+		height: 360px;
+		margin: 73px auto 0;
+
+		transform: translateX(-1.7%);
+	}
+
+	&__text {
+		padding: 6px 223px 184px;
+
+		font-family: $Oswald;
+		font-weight: 400;
+		@include option (font-size, 78px);
+		line-height: 103%;
+		letter-spacing: -0.05em;
+		text-transform: lowercase;
+		color: $yellow-green;
+	}
 }

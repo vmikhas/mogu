@@ -25,4 +25,4 @@ export default function Order({ title, desc }) {
       </div>
     </section>
   );
-}
+};

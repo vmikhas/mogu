@@ -27,4 +27,4 @@ export default function Promo () {
       </div>
     </section>
   );
-}
+};
