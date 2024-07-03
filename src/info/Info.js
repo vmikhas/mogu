@@ -17,7 +17,7 @@ export default function Info({ searchTitle, searchDesc, facilitiesTitle, facilit
           </li>
           <li className="info__item info__item_facilities">
             <h2 className="info__title info__title_facilities">{parse(facilitiesTitle)}</h2>
-            <p className="info__desc info__desc_facilities">{facilitiesDesc}</p>
+            <p className="info__desc info__desc_facilities">{parse(facilitiesDesc)}</p>
             <div className="info__image info__image_facilities">
               <img src={hands} alt=""/>
             </div>

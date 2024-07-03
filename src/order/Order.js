@@ -1,3 +1,4 @@
+import parse from "html-react-parser";
 import folder from "./../assest/images/folder.png";
 
 export default function Order({ title, desc }) {
@@ -12,7 +13,7 @@ export default function Order({ title, desc }) {
       <div className="order__container container">
         <div className="order__wrapper">
           <h2 className="order__title">{title}</h2>
-          <p className="order__desc">{desc}</p>
+          <p className="order__desc">{parse(desc)}</p>
           <div className="order__image">
             <img src={folder} alt="" />
           </div>

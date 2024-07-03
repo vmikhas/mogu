@@ -1,11 +1,22 @@
 .possibilities {
 	&__container {
 		margin-top: 23px;
+
+		@media (max-width: $MIN-DESKTOP) {
+			margin-top: 11px;
+		}
 	}
 
 	&__list {
 		display: grid;
-    grid-template-columns: repeat(3, 32.3%);		column-gap: 20px;
+    grid-template-columns: repeat(3, 32.3%);
+		column-gap: 20px;
+
+		@media (max-width: $MIN-DESKTOP) {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3, 50%);
+			row-gap: 10px;
+		}
 	}
 
 	&__item {
@@ -35,34 +46,42 @@
 
 		font-family: $Oswald;
 		font-weight: 400;
-		@include option (font-size, 78px);
-		// font-size: 78px;
+		@include option (font-size, 78px, 36px);
 		line-height: 103%;
 		letter-spacing: -0.05em;
+
+		@media (max-width: $MIN-DESKTOP) {
+			padding: 20px 16px 0;
+
+			line-height: 111%;
+			letter-spacing: -0.03em;
+		}
 	}
 
 	&__desc {
 		padding: 20px 24px 40px;
 
 		font-weight: 400;
-		@include option (font-size, 44px);
-		// font-size: 44px;
+		@include option (font-size, 44px, 20px);
 		line-height: 118%;
 		letter-spacing: 0em;
+
+		@media (max-width: $MIN-DESKTOP) {
+			padding: 20px 20px 44px 16px;
+
+			line-height: 110%;
+			letter-spacing: -0.01em;
+		}
 	}
 
 	&__image {
 		position: absolute;
-		top: 50%;
+		// top: 50%;
+		@include option (top, 50%, 44%);
 		left: 50%;
 		transform: translate(-49.8%, -51.2%);
 		z-index: 2;
 
-		@include option(height, 583px);
-
-		// max-width: 584px;
-    // width: calc(100% + 160px);
-    // height: auto;
-		
+		@include option (height, 583px, 410px);
 	}
 }
