@@ -25,7 +25,7 @@ export default function Intro({ title, desc, userText, userCollegue, userDesc })
 			<div className="intro__container container">
 				<div className="intro__tracker">
 					<h1 className="intro__title">{parse(title)}</h1>
-					<p className="intro__desc">{desc}</p>
+					<p className="intro__desc">{parse(desc)}</p>
 					<ul className="intro__list">
 						{tags.map((tag) => <li className="intro__item">{tag}</li>)}
 					</ul>

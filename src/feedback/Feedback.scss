@@ -1,13 +1,34 @@
 .feedback {
+	position: relative;
+
 	margin-top: -30px;
 
 	background-color: $white;
-
 	border-top-left-radius: 30px;
 	border-top-right-radius: 30px;
 
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 449px;
+		height: 454px;
+
+		background-image: url("./../assest/images/logos/cat_footer.svg");
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		position: absolute;
+		bottom: 0;
+		right: 50%;
+		transform: translateX(160.3%);
+	}
+
 	&__container {
 		padding-top: 80px;
+		padding-bottom: 81px;
 	}
 
 	&__form {
@@ -15,7 +36,6 @@
 		padding: 33px 64px;
 
 		background-color: $smoky-white;
-
 		border-radius: 30px;
 	}
 
@@ -23,7 +43,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
-
 		padding: 0;
 
 		border: none;
@@ -63,6 +82,38 @@
 	}
 
 	&__textarea {
+		height: 240px;
+		padding: 26px 21px;
 
+		resize: none;
+	}
+
+	&__button {
+		height: 100px;
+		margin: 32px 0 16px;
+		padding: 0 32px;
+
+		font-weight: 500;
+		@include option (font-size, 28px);
+		line-height: 171%;
+		letter-spacing: 0em;
+		color: $white;
+
+		background-color: $black;
+		border: none;
+		border-radius: 30px;
+
+		cursor: pointer;
+
+		transition: 0.2s ease-in-out;
+
+		&:hover,
+		&:focus {
+			opacity: 0.8;
+		}
+
+		&:active {
+			opacity: 0.6;
+		}
 	}
 }

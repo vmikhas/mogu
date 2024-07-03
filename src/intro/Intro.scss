@@ -4,29 +4,52 @@
 		grid-template-columns: repeat(2, 1fr);
 		gap: 23px;
 		margin-top: 58px;
+
+		@media (max-width: $MIN-DESKTOP) {
+			grid-template-columns: 1fr;
+			margin-top: 18px;
+		}
 	}
 	
 	&__tracker {
 		margin: 25px 0 0 24px;
+
+		@media (max-width: $MIN-DESKTOP) {
+			margin: 20px 0 0;
+		}
 	}
 	
 	&__title {
 		font-family: $Oswald;
 		font-weight: 500;
-		font-size: 90px;
+		@include option (font-size, 90px, 44px);
+		// font-size: 90px;
 		line-height: 89%;
 		letter-spacing: -0.02em;
 		color: $blue;
+
+		@media (max-width: $MIN-DESKTOP) {
+			line-height: 114%;
+			letter-spacing: -0.05em;
+		}
 	}
 	
 	&__desc {
 		padding-top: 23px;
 	
 		font-weight: 400;
+		// @include option (font-size, 18px);
 		font-size: 22px;
 		line-height: 164%;
 		letter-spacing: -0.01em;
 		color: $blue;
+
+		@media (max-width: $MIN-DESKTOP) {
+			padding-top: 19px;
+
+			font-size: 16px;
+			line-height: 125%;
+		}
 	}
 	
 	&__list {
@@ -34,6 +57,11 @@
 		flex-wrap: wrap;
 		gap: 12px;
 		padding-top: 64px;
+
+		@media (max-width: $MIN-DESKTOP) {
+			gap: 16px 12px;
+			padding-top: 31px;
+		}
 	}
 	
 	&__item {
@@ -48,18 +76,30 @@
 	
 		background-color: $smoky-white;
 		border-radius: 12px;
+
+		@media (max-width: $MIN-DESKTOP) {
+			padding: 0 11px;
+
+			font-size: 14px;
+			line-height: 271%;
+		}
 	}
 	
 	&__form {
 		position: relative;
-	
+		
+		max-width: 596px;
 		margin-top: 12px;
+
+		@media (max-width: $MIN-DESKTOP) {
+			margin-top: 15px;
+		}
 	}
 	
 	&__input {
-		width: 478px;
+		width: 100%;
 		height: 100px;
-		padding: 0 110px 0 21px;
+		padding: 0 228px 0 21px;
 	
 		font-weight: 400;
 		font-size: 28px;
@@ -73,15 +113,26 @@
 		&::placeholder {
 			color: $cadet-blue;
 		}
+
+		@media (max-width: $MIN-DESKTOP) {
+			height: 70px;
+			padding: 0 0 0 14px;
+
+			font-size: 18px;
+			line-height: 211%;
+			letter-spacing: -0.01em;
+
+			border-radius: 20px;
+		}
 	}
 	
 	&__button {
 		position: absolute;
 		top: 0;
-		right: 25px;
+		right: 0;
 	
-		width: 208px;
 		height: 100px;
+		padding: 0 32px;
 	
 		font-weight: 500;
 		font-size: 28px;
@@ -95,9 +146,31 @@
 		border-radius: 30px;
 	
 		cursor: pointer;
+		
+		transition: 0.2s ease-in-out;
 	
 		span {
 			color: $emerald;
+		}
+
+		&:hover,
+		&:focus {
+			opacity: 0.8;
+		}
+
+		&:active {
+			opacity: 0.6;
+		}
+
+		@media (max-width: $MIN-DESKTOP) {
+			height: 70px;
+			padding: 0 15px;
+
+			font-size: 18px;
+			line-height: 211%;
+			letter-spacing: -0.01em;
+			
+			border-radius: 20px;
 		}
 	}
 
@@ -124,6 +197,21 @@
 			bottom: -22.8%;
 			left: 1%;
 		}
+
+		@media (max-width: $MIN-DESKTOP) {
+			margin-top: 8px;
+
+			border-radius: 20px;
+
+			&::after {
+				max-width: 335px;
+				max-height: 165px;
+
+				background-size: 335px 165px;
+
+				bottom: -22.2%;
+			}
+		}
 	}
 	
 	&__user-text {
@@ -133,6 +221,7 @@
 	
 		font-weight: 500;
 		font-size: 16px;
+		// @include option (font-size ,12px);
 		line-height: 300%;
 		letter-spacing: 0.01em;
 		text-align: center;
@@ -140,6 +229,17 @@
 	
 		background-color: $white;
 		border-radius: 12px;
+
+		@media (max-width: $MIN-DESKTOP) {
+			margin: 10px 0 0 12px;
+			padding: 0 8px;
+
+			font-size: 10px;
+			line-height: 290%;
+			letter-spacing: 0.02em;
+
+			border-radius: 9px;
+		}
 	}
 	
 	&__user-desc {
@@ -151,6 +251,7 @@
 	
 		font-weight: 500;
 		font-size: 22px;
+		// @include option (font-size ,19px);
 		line-height: 218%;
 		letter-spacing: -0.01em;
 		text-align: center;
@@ -177,6 +278,15 @@
 				left: 47%;
 				transform: rotate(45deg);
 			}
+
+			@media (max-width: $MIN-DESKTOP) {
+				margin-top: 25px;
+
+				&::after {
+					width: 15px;
+					height: 15px;
+				}
+			}
 		}
 	
 		&_me {
@@ -197,6 +307,27 @@
 				left: 27%;
 				z-index: 2;
 			}
+
+			@media (max-width: $MIN-DESKTOP) {
+				margin: 92px 0 107px 29px;
+
+				&::after {
+					width: 20px;
+					height: 20px;
+
+					background-size: 20px 20px;
+				}
+			}
+		}
+
+		@media (max-width: $MIN-DESKTOP) {
+			padding: 8px 15px;
+	
+			font-size: 13px;
+			line-height: 178%;
+			letter-spacing: 0.01em;
+			
+			border-radius: 12px;
 		}
 	}
 	
@@ -207,6 +338,10 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		padding: 45px 0 0;
+
+		@media (max-width: $MIN-DESKTOP) {
+			padding: 15px 0 0;
+		}
 	}
 	
 	&__user-item {
@@ -235,6 +370,29 @@
 		&:nth-child(5) {
 			left: 67%;
 			z-index: 5;
+		}
+
+		@media (max-width: $MIN-DESKTOP) {
+			left: 4.4%;
+
+			width: 75px;
+			height: 75px;
+
+			&:nth-child(2) {
+				left: 21.8%;
+			}
+	
+			&:nth-child(3) {
+				left: 38.5%;
+			}
+		
+			&:nth-child(4) {
+				left: 56%;
+			}
+		
+			&:nth-child(5) {
+				left: 72.8%;
+			}
 		}
 	}
 }
