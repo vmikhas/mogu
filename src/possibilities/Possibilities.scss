@@ -1,4 +1,6 @@
 .possibilities {
+	overflow: hidden;
+
 	&__container {
 		margin-top: 23px;
 
@@ -7,14 +9,15 @@
 		}
 	}
 
+
 	&__list {
 		display: grid;
-    grid-template-columns: repeat(3, 32.3%);
+    	grid-template-columns: repeat(3, 32.3%);
 		column-gap: 20px;
 
 		@media (max-width: $MIN-DESKTOP) {
 			grid-template-columns: 1fr;
-			grid-template-rows: repeat(3, 50%);
+			grid-template-rows: repeat(3, 208px);
 			row-gap: 10px;
 		}
 	}
@@ -38,6 +41,16 @@
 			color: $vanilla;
 
 			background-color: $gainsborough;
+
+			@media (max-width: $MIN-DESKTOP) {
+				.possibilities__title {
+					padding-top: 29px;
+				}
+
+				.possibilities__desc {
+					padding-bottom: 34px;
+				}
+			}
 		}
 	}
 
@@ -76,7 +89,6 @@
 
 	&__image {
 		position: absolute;
-		// top: 50%;
 		@include option (top, 50%, 44%);
 		left: 50%;
 		transform: translate(-49.8%, -51.2%);

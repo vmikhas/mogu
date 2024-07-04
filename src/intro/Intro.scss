@@ -23,7 +23,6 @@
 		font-family: $Oswald;
 		font-weight: 500;
 		@include option (font-size, 90px, 44px);
-		// font-size: 90px;
 		line-height: 89%;
 		letter-spacing: -0.02em;
 		color: $blue;
@@ -38,7 +37,6 @@
 		padding-top: 23px;
 	
 		font-weight: 400;
-		// @include option (font-size, 18px);
 		font-size: 22px;
 		line-height: 164%;
 		letter-spacing: -0.01em;
@@ -174,6 +172,40 @@
 		}
 	}
 
+	&__button-bottom {
+		width: 34px;
+		height: 50px;
+		margin: 31px 0 0 18px;
+
+		background-color: transparent;
+
+		border: none;
+
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
+
+		&:hover,
+		&:focus {
+			scale: 1.2;
+		}
+
+		&:active {
+			opacity: 0.6;
+		}
+
+		@media (max-width: $MIN-DESKTOP) {
+			display: none;
+		}
+	}
+
+	&__image {
+		width: 20px;
+		height: 38px;
+
+		color: $blue;
+		fill: currentColor;
+	}
+
 	&__wrapper {
 		position: relative;
 	
@@ -251,7 +283,6 @@
 	
 		font-weight: 500;
 		font-size: 22px;
-		// @include option (font-size ,19px);
 		line-height: 218%;
 		letter-spacing: -0.01em;
 		text-align: center;

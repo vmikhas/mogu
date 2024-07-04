@@ -5,6 +5,13 @@
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
+  @media (max-width: $MIN-DESKTOP) {
+    padding: 30px 0 64px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 66.7%;
@@ -12,10 +19,20 @@
     background-color: $light-silver;
 
     border-radius: 30px;
+
+    @media (max-width: $MIN-DESKTOP) {
+      grid-template-columns: 1fr;
+
+      border-radius: 20px;
+    }
   }
 
   &__box {
     padding: 24px 20px 0 24px;
+
+    @media (max-width: $MIN-DESKTOP) {
+      padding: 15px 15px 0;
+    }
   }
 
   &__list {
@@ -29,8 +46,8 @@
     padding: 0 17px;
 
     font-weight: 500;
-    @include option (font-size, 16px);
-    line-height: 300%;
+    @include option (font-size, 16px, 14px);
+    @include option (line-height, 300%, 293%);
     letter-spacing: 0.01em;
     text-align: center;
     color: $grayish-green;
@@ -53,55 +70,76 @@
 
       background-color: $ashen;
 
-			pointer-events: none;
+      pointer-events: none;
+    }
+
+    @media (max-width: $MIN-DESKTOP) {
+      height: 41px;
+      padding: 0 11px;
     }
   }
 
   &__title {
-    padding: 33px 0 0;
+    @include option (padding, 33px 0 0, 27px 0 0);
 
     font-weight: 500;
-    @include option (font-size, 32px);
-    line-height: 150%;
-    letter-spacing: 0em;
+    @include option (font-size, 32px, 24px);
+    @include option (line-height, 150%, 200%);
+    letter-spacing: 0;
     color: $black;
+
   }
 
   &__desc {
-    padding: 6px 0 0;
+    @include option (padding, 6px 0 0, 3px 0 0);
 
     font-weight: 400;
-    @include option (font-size, 22px);
-    line-height: 164%;
+    @include option (font-size, 22px, 16px);
+    @include option (line-height, 164%, 187%);
     letter-spacing: -0.01em;
     color: $grayish-green;
+
+    @media (min-width: $MIN-DESKTOP) {
+      br {
+        display: none;
+      }
+    }
   }
 
   &__inner {
-    margin: 8px;
+    @include option (margin, 8px, 24px 5px 5px);
 
     background-color: $white;
 
-    border-radius: 25px;
+    @include option (border-radius, 25px, 20px);
   }
 
 	&__image {
-		width: 480px;
-		height: 360px;
-		margin: 73px auto 0;
+      width: 480px;
+      height: 360px;
+      margin: 73px auto 0;
 
-		transform: translateX(-1.7%);
+      transform: translateX(-1.7%);
+
+      @media (max-width: $MIN-DESKTOP) {
+        width: 209px;
+        height: 156px;
+        margin: 25px auto 0;
+
+        transform: translateX(0);
+      }
 	}
 
 	&__text {
-		padding: 6px 223px 184px;
+      @include option (padding, 6px 223px 184px, 0 72px 39px);
 
-		font-family: $Oswald;
-		font-weight: 400;
-		@include option (font-size, 78px);
-		line-height: 103%;
-		letter-spacing: -0.05em;
-		text-transform: lowercase;
-		color: $yellow-green;
+      font-family: $Oswald;
+      font-weight: 400;
+      @include option (font-size, 78px,32px);
+      @include option (line-height, 103%, 125%);
+      @include option (letter-spacing, -0.05em, 0);
+      @include option (text-align,start, center);
+      text-transform: lowercase;
+      color: $yellow-green;
 	}
 }

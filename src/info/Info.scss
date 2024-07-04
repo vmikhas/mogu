@@ -156,9 +156,13 @@
         padding: 15px 55px 49px;
       }
 
-			&_facilities {
-				padding: 17px 25px 0;
-			}
+      &_facilities {
+        padding: 17px 25px 0;
+
+        br {
+          display: none;
+        }
+      }
     }
   }
 }

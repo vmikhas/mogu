@@ -2,9 +2,9 @@
   &__container {
     margin-top: 24px;
 
-		@media (max-width: $MIN-DESKTOP) {
-			margin-top: 9px;
-		}
+    @media (max-width: $MIN-DESKTOP) {
+      margin-top: 9px;
+    }
   }
 
   &__wrapper {
@@ -18,12 +18,12 @@
     background-color: $lilac;
     border-radius: 30px;
 
-		@media (max-width: $MIN-DESKTOP) {
-			line-height: 110%;
-			letter-spacing: -0.01em;
+    @media (max-width: $MIN-DESKTOP) {
+      line-height: 110%;
+      letter-spacing: -0.01em;
 
-			border-radius: 20px;
-		}
+      border-radius: 20px;
+    }
   }
   
   &__title {
@@ -36,20 +36,26 @@
     letter-spacing: -0.05em;
     text-align: center;
 
-		@media (max-width: $MIN-DESKTOP) {
-			padding: 25px 0 0;
+    @media (max-width: $MIN-DESKTOP) {
+      padding: 25px 0 0;
 
-			line-height: 111%;
-			letter-spacing: -0.03em;
-		}
+      line-height: 111%;
+      letter-spacing: -0.03em;
+    }
   }
 
   &__desc {
     padding: 21px 177px 24px;
 
-		@media (max-width: $MIN-DESKTOP) {
-			padding: 15px 15px 20px;
-		}
+      @media (min-width: $MIN-DESKTOP) {
+        br {
+          display: none;
+        }
+      }
+
+      @media (max-width: $MIN-DESKTOP) {
+        padding: 15px 15px 20px;
+      }
   }
 
   &__image {
@@ -57,10 +63,10 @@
     height: 300px;
     margin: 0 auto;
 
-		@media (max-width: $MIN-DESKTOP) {
-			width: 210px;
-			height: 158px;
-		}
+    @media (max-width: $MIN-DESKTOP) {
+      width: 210px;
+      height: 158px;
+    }
   }
 
   &__list {
@@ -70,18 +76,52 @@
     align-items: center;
     column-gap: 80px;
     padding: 25px 0 40px;
-		
-		@media (max-width: $MIN-DESKTOP) {
-			grid-template-columns: 1fr;
-			row-gap: 47px;
-			padding: 25px 0 30px;
-		}
+
+    @media (max-width: $MIN-DESKTOP) {
+      grid-template-columns: 1fr;
+      row-gap: 47px;
+      padding: 25px 0 30px;
+    }
   }
 
 	&__item {
-		@media (max-width: $MIN-DESKTOP) {
-			padding: 0 60px;
-		}
+      position: relative;
+
+      &_0,
+      &_1 {
+        &:before {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 30px;
+
+          mask-image: url("./../assest/images/arrow.svg");
+          mask-position: center;
+          mask-repeat: no-repeat;
+          background-color: $white;
+
+          position: absolute;
+          top: 50%;
+          right: -52px;
+          transform: translateY(-50%) rotate(270deg);
+        }
+      }
+
+      @media (max-width: $MIN-DESKTOP) {
+        padding: 0 60px;
+
+        &_0,
+        &_1 {
+          &:before {
+            width: 13px;
+            height: 22px;
+
+            top: 128%;
+            right: 50%;
+            transform: translateX(47%);
+          }
+        }
+      }
 	}
 }
 

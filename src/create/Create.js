@@ -1,3 +1,4 @@
+import parse from "html-react-parser";
 import { useState } from "react";
 import camera from "./../assest/images/camera.png";
 
@@ -24,7 +25,7 @@ export default function Create({ title, desc, text }) {
               )}
             </ul>
             <h2 className="create__title">{title}</h2>
-            <p className="create__desc">{desc}</p>
+            <p className="create__desc">{parse(desc)}</p>
           </div>
           <div className="create__inner">
             <div className="create__image">

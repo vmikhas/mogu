@@ -1,6 +1,6 @@
 .promo {
    &__container {
-    margin-top: 126px;  
+    margin-top: 22px;
   
     background-color: $signal-black;
     border-top-left-radius: 30px;
@@ -19,7 +19,6 @@
 
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     padding: 200px 5px 289px 0;
 
     &::before {

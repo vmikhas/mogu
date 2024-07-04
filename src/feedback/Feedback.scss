@@ -9,11 +9,16 @@
 
 	overflow: hidden;
 
+	@media (max-width: $MIN-DESKTOP) {
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+
 	&::before {
 		content: "";
 		display: block;
-		width: 449px;
-		height: 454px;
+		width: 750px;
+		height: 677px;
 
 		background-image: url("./../assest/images/logos/cat_footer.svg");
 		background-size: 100% 100%;
@@ -21,14 +26,27 @@
 		background-repeat: no-repeat;
 
 		position: absolute;
-		bottom: 0;
+		bottom: -222px;
 		right: 50%;
-		transform: translateX(160.3%);
+		transform: translateX(136.1%);
+
+		@media (max-width: $MIN-DESKTOP) {
+			width: 375px;
+			height: 340px;
+
+			bottom: -87px;
+			transform: translateX(85.2%);
+		}
 	}
 
 	&__container {
 		padding-top: 80px;
 		padding-bottom: 81px;
+
+		@media (max-width: $MIN-DESKTOP) {
+			padding-top: 23px;
+			padding-bottom: 263px;
+		}
 	}
 
 	&__form {
@@ -37,12 +55,18 @@
 
 		background-color: $smoky-white;
 		border-radius: 30px;
+
+		@media (max-width: $MIN-DESKTOP) {
+			padding: 20px 15px;
+
+			border-radius: 20px;
+		}
 	}
 
 	&__form-group {
 		display: flex;
 		flex-direction: column;
-		gap: 16px;
+		@include option (gap, 16px, 10px);
 		padding: 0;
 
 		border: none;
@@ -53,10 +77,17 @@
 
 		font-family: $Oswald;
 		font-weight: 500;
-		@include option (font-size, 72px);
+		@include option (font-size, 72px, 32px);
 		line-height: 111%;
 		letter-spacing: -0.03em;
 		color: $black;
+
+		@media (max-width: $MIN-DESKTOP) {
+			padding: 0 0 20px;
+
+			line-height: 150%;
+			letter-spacing: -0.06em;
+		}
 	}
 
 	&__input,
@@ -75,10 +106,20 @@
 		&::placeholder {
 			color: $cadet-blue;
 		}
+
+		@media (max-width: $MIN-DESKTOP) {
+			padding: 0 15px;
+
+			font-size: 18px;
+			line-height: 211%;
+			letter-spacing: -0.01em;
+
+			border-radius: 20px;
+		}
 	}
 
 	&__input {
-		height: 100px;
+		@include option (height, 100px, 70px);
 	}
 
 	&__textarea {
@@ -86,6 +127,13 @@
 		padding: 26px 21px;
 
 		resize: none;
+
+		@media (max-width: $MIN-DESKTOP) {
+			height: 182px;
+			padding: 14px 15px;
+
+			letter-spacing: -0.03em;
+		}
 	}
 
 	&__button {
@@ -94,9 +142,9 @@
 		padding: 0 32px;
 
 		font-weight: 500;
-		@include option (font-size, 28px);
-		line-height: 171%;
-		letter-spacing: 0em;
+		@include option (font-size, 28px, 18px);
+		@include option (line-height, 171%, 211%);
+		@include option (letter-spacing, 0, -0.01em);
 		color: $white;
 
 		background-color: $black;
@@ -114,6 +162,14 @@
 
 		&:active {
 			opacity: 0.6;
+		}
+
+		@media (max-width: $MIN-DESKTOP) {
+			width: 320px;
+			height: 78px;
+			margin: 20px auto 14px;
+
+			border-radius: 20px;
 		}
 	}
 }

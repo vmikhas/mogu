@@ -18,8 +18,8 @@ export default function Order({ title, desc }) {
             <img src={folder} alt="" />
           </div>
           <ul className="order__list">
-            {items.map((item) =>
-              <li className="order__item">{item}</li>
+            {items.map((item, id) =>
+              <li className={`order__item order__item_${id}`} key={'item-'+id}>{item}</li>
             )}
           </ul>
         </div>

@@ -13,19 +13,20 @@ export default function Header() {
         <div className="main-header__container container">
           <a className="main-header__logo" href="index.html">
             <div className="main-header__logo-image">
-              <LogoCat />
+              <LogoCat/>
             </div>
             <div className="main-header__logo-text">
-              <LogoText />
+              <LogoText/>
             </div>
           </a>
-          <div className="main-header__wrapper">
+          <button className="main-header__toggle main-header__toggle_open" type="button" aria-label="Открыть меню"><span></span></button>
+          <div className="main-header__wrapper main-header__wrapper_open">
             <nav className="main-header__nav">
               <ul className="main-header__list">
-                {links.map((link) => 
-                  <li className="main-header__item">
-                    <a className="main-header__link" href="#1">{link}</a>
-                  </li>
+                {links.map((link) =>
+                    <li className="main-header__item">
+                      <a className="main-header__link" href="#1">{link}</a>
+                    </li>
                 )}
               </ul>
             </nav>
@@ -34,4 +35,4 @@ export default function Header() {
         </div>
       </header>
     );
-  };
+};
