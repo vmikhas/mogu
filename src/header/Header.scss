@@ -55,9 +55,8 @@
 
 	&__toggle {
 		position: relative;
-		z-index: 2;
+		z-index: 8;
 
-		//display: none;
 		width: 39px;
 		height: 16px;
 		margin: 12px 0 0;
@@ -130,6 +129,10 @@
 				}
 			}
 		}
+
+		@media (min-width: $MIN-DESKTOP) {
+			display: none;
+		}
 	}
 
 	&__wrapper {
@@ -140,7 +143,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: 1;
+			z-index: 7;
 
 			grid-template-columns: 1fr;
 			width: 100%;
