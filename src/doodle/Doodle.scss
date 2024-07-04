@@ -19,7 +19,8 @@
     transform: translateX(-1.7%);
 
     @media (max-width: $MIN-DESKTOP) {
-      width: 335px;
+      max-width: 335px;
+			width: 100%;
       height: 93px;
     }
   }

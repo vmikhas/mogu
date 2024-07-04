@@ -17,7 +17,7 @@
 
 		@media (max-width: $MIN-DESKTOP) {
 			grid-template-columns: 1fr;
-			grid-template-rows: repeat(3, 208px);
+			grid-template-rows: repeat(3, 1fr);
 			row-gap: 10px;
 		}
 	}
@@ -95,5 +95,14 @@
 		z-index: 2;
 
 		@include option (height, 583px, 410px);
+
+		img {
+			width: auto;
+		}
+
+		@media (max-width: $MIN-DESKTOP) {
+			top: 44.6%;
+			transform: translate(-49.2%, -51.2%);
+		}
 	}
 }
