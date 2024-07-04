@@ -136,9 +136,6 @@
 		display: grid;
 		grid-template-columns: 1fr min-content;
 
-		&_open {
-			display: block;
-		}
 
 		@media (max-width: $MIN-DESKTOP) {
 			position: absolute;
