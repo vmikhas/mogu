@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { ReactComponent as LogoCat } from "./../assest/images/logos/cat.svg";
 import { ReactComponent as LogoText } from "./../assest/images/logos/mogu.svg";
 
 export default function Header() {
+  const [toggleOpen, setToggleOpen] = useState(true);
+
   const links = [
     'О нас',
     'Кейсы',
@@ -19,8 +22,8 @@ export default function Header() {
               <LogoText/>
             </div>
           </a>
-          <button className="main-header__toggle main-header__toggle_open" type="button" aria-label="Открыть меню"><span></span></button>
-          <div className="main-header__wrapper main-header__wrapper_open">
+          <button className={`main-header__toggle ${toggleOpen ? 'main-header__toggle' : 'main-header__toggle_open'}`} onClick={() => setToggleOpen(!toggleOpen)} aria-label="Открыть меню" ><span></span></button>
+          <div className={`main-header__wrapper ${toggleOpen ? 'main-header__wrapper' : 'main-header__wrapper_open'}`}>
             <nav className="main-header__nav">
               <ul className="main-header__list">
                 {links.map((link) =>

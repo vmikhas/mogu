@@ -55,11 +55,10 @@
 
 	&__toggle {
 		position: relative;
-		z-index: 2;
+		z-index: 8;
 
-		display: none;
 		width: 39px;
-		height: 16px;
+		height: 20px;
 		margin: 12px 0 0;
 		padding: 0;
 
@@ -90,6 +89,8 @@
 
 				position: absolute;
 				right: 0;
+
+				transition: all 0.3s ease 0s;
 			}
 
 			&::after {
@@ -109,16 +110,22 @@
 
 			span {
 				background-color: transparent;
+				// transform: scale(0);
+				// scale: 0;
 
 				&::after,
 				&::before {
 					content: "";
+					width: 25px;
+					height: 2px;
+					
+					background-color: $blue;
+					
 					position: absolute;
 					top: -5px;
 					right: 15px;
-					width: 25px;
-					height: 2px;
-					background-color: $blue;
+
+					transition: all 0.3s ease 0s;
 				}
 
 				&::after {
@@ -130,6 +137,10 @@
 				}
 			}
 		}
+
+		@media (min-width: $MIN-DESKTOP) {
+			display: none;
+		}
 	}
 
 	&__wrapper {
@@ -137,18 +148,32 @@
 		grid-template-columns: 1fr min-content;
 
 		@media (max-width: $MIN-DESKTOP) {
+			// display: none;
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: 1;
+			z-index: 7;
 
 			grid-template-columns: 1fr;
 			width: 100%;
 			padding: 0 10px;
 
 			background-color: $white;
+			transform: translateY(-100%);
+			transition: all 0.4s ease;
+			// animation: toggleAnimation 0.4s ease;
+		}
+
+		&_open {
+			// display: block;
+			transform: translateY(0);
 		}
 	}
+
+	// @keyframes toggleAnimation {
+	// 	from {opacity: 0}
+	// 	to {opacity: 1}
+	// }
 	
 	&__list {
 		display: flex;

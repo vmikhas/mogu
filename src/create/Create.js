@@ -4,6 +4,7 @@ import camera from "./../assest/images/camera.png";
 
 export default function Create({ title, desc, text }) {
 	const [active, setActive] = useState(0);
+	
   const items = [
     'Product marketing',
     'Growth marketing',

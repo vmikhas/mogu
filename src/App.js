@@ -19,10 +19,10 @@ function App() {
       <Promo />
       <Info {...infoContent} />
       <Order {...infoOrder} />
-			<Possibilities />
+        <Possibilities />
       <Doodle />
       <Create {...infoCreate} />
-			<Feedback {...infoFeedback} />
+        <Feedback {...infoFeedback} />
     </div>
   );
 };
