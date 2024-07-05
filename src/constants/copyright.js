@@ -27,3 +27,24 @@ export const infoCreate = {
 export const infoFeedback = {
 	title: 'Обратная связь'
 };
+
+export const doodle = {
+  image: {
+    sources: [
+      {
+        srcSet: './images/doodle_m.png',
+        type: 'image/png',
+        media: '(max-width: 1023px)'
+      },
+      {
+        srcSet: './images/doodle.png',
+        type: 'image/png',
+        media: '(min-width: 1024px)'
+      },
+    ],
+    imgAttr: {
+      src : './images/doodle.png',
+      alt:'Каракули'
+    }
+  }
+}

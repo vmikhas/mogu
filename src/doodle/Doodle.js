@@ -1,4 +1,5 @@
-import doodle from "./../assest/images/doodle.png";
+import Picture from "../constants/Picture";
+import {doodle} from "../constants/copyright";
 
 export default function Doodle() {
 
@@ -6,7 +7,7 @@ export default function Doodle() {
     <section className="doodle">
       <div className="doodle__container container">
         <div>
-          <img className="doodle__image" src={doodle} alt="" />
+          <Picture {...doodle.image}/>
         </div>
       </div>
     </section>

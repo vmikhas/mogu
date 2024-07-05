@@ -1,26 +1,12 @@
-export default function Picture({sources, img}) {
+export default function Picture({sources, imgAttr}) {
 
-    const sources = [
-        {
-            srcSet: '',
-            type: '',
-            media: ''
-        },
-        {
-            srcSet: '',
-            type: '',
-            media: ''
-        },
-    ];
+    console.log('sources ----> ', !!sources)
 
-    const img = {
-        src : '',
-        alt:''
-    }
 
     return (
         <picture>
-
+            {sources ? (sources.map((source, id) => <source key={id} {...source}/>)) : null}
+            <img {...imgAttr}/>
         </picture>
     );
 }
