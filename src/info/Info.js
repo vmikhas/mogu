@@ -5,7 +5,7 @@ import hands from "./../assest/images/hands.png";
 export default function Info({ searchTitle, searchDesc, facilitiesTitle, facilitiesDesc }) {
 
   return (
-    <section className="info">
+    <section className="info" id="info">
       <div className="info__container container">
         <ul className="info__list">
           <li className="info__item info__item_search">

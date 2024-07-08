@@ -15,7 +15,7 @@ export default function Promo () {
     // const b = `item-${a}`;
 
   return (
-    <section className="promo">
+    <section className="promo" id="promo">
       <div className="promo__container">
         <ul className="promo__list">
 	        {images.map((image,id) =>

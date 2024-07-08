@@ -1,6 +1,6 @@
 export default function Feedback ({ title }) {
 	return (
-		<section className="feedback">
+		<section className="feedback" id="feedback">
 			<div className="feedback__container container">
 				<form className="feedback__form" action="#" method="POST">
 					<fieldset className="feedback__form-group">

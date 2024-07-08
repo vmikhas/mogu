@@ -28,7 +28,7 @@ export default function Intro({ title, desc, userText, userCollegue, userDesc })
 				<h1 className="intro__title">{parse(title)}</h1>
 				<p className="intro__desc">{parse(desc)}</p>
 				<ul className="intro__list">
-					{tags.map((tag) => <li className="intro__item">{tag}</li>)}
+					{tags.map((tag, id) => <li key={id} className="intro__item">{tag}</li>)}
 				</ul>
 				<form className="intro__form" action="#" method="POST">
 					<input
@@ -50,9 +50,9 @@ export default function Intro({ title, desc, userText, userCollegue, userDesc })
 				</ul>
 				<p className="intro__user-desc intro__user-desc_me">{userDesc}</p>
 			</div>
-			<button className="intro__button-bottom" type="button" aria-label="Перейти ниже">
+			<a className="intro__button-bottom" href="#promo" aria-label="Перейти ниже">
 				<div className="intro__image"><Arrow/></div>
-			</button>
+			</a>
 		</div>
 	</section>
   );

@@ -138,7 +138,7 @@
       @include option (font-size, 78px,32px);
       @include option (line-height, 103%, 125%);
       @include option (letter-spacing, -0.05em, 0);
-      @include option (text-align,start, center);
+      @include option (text-align, start, center);
       text-transform: lowercase;
       color: $yellow-green;
 	}

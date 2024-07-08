@@ -1,6 +1,6 @@
 import './style.scss';
 
-import Header from './header/Header';
+import MainHeader from './header/Main-Header';
 import Intro from './intro/Intro';
 import Promo from './promo/Promo';
 import Info from './info/Info';
@@ -14,14 +14,14 @@ import { infoContent, infoCreate, infoFeedback, infoOrder, introContent } from '
 function App() {
   return (
     <div className="App">
-      <Header />
+      <MainHeader />
       <Intro {...introContent} />
       <Promo />
       <Info {...infoContent} />
       <Order {...infoOrder} />
         <Possibilities />
       <Doodle />
-      <Create {...infoCreate} />
+      <Create content={infoCreate} />
         <Feedback {...infoFeedback} />
     </div>
   );

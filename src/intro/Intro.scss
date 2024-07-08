@@ -128,7 +128,9 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-	
+
+		//display: flex;
+		//justify-content: center;
 		height: 100px;
 		padding: 0 32px;
 	
@@ -173,9 +175,13 @@
 	}
 
 	&__button-bottom {
+		position: relative;
+
+		display: flex;
+		justify-content: center;
 		width: 34px;
 		height: 50px;
-		margin: 31px 0 0 18px;
+		margin: 37px 0 0 17px;
 
 		background-color: transparent;
 
@@ -183,10 +189,11 @@
 
 		cursor: pointer;
 		transition: 0.3s ease-in-out;
+		animation: arrowDown 2s infinite;
 
 		&:hover,
 		&:focus {
-			scale: 1.2;
+			opacity: 0.8;
 		}
 
 		&:active {
@@ -195,6 +202,19 @@
 
 		@media (max-width: $MIN-DESKTOP) {
 			display: none;
+		}
+	}
+
+	@keyframes arrowDown {
+		0% {
+			bottom: 19px;
+		}
+		50% {
+			bottom: 0;
+			scale: 1.2;
+		}
+		100% {
+			bottom: 19px;
 		}
 	}
 
