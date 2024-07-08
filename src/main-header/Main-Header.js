@@ -5,13 +5,10 @@ import classNames from "classnames";
 
 export default function MainHeader() {
     const [toggleOpen, setToggleOpen] = useState(false);
-
-    const toggleHandled = () => {
+		const toggleHandled = () => {
         document.body.classList.toggle('no-scroll');
         setToggleOpen(p => !p);
-    }
-
-    // const handleClick = () => App.srollIntoView({ behavior: "smooth" });
+    };
 
     const links = [
         {

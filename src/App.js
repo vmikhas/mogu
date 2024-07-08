@@ -1,6 +1,6 @@
 import './style.scss';
 
-import MainHeader from './header/Main-Header';
+import MainHeader from './main-header/Main-Header';
 import Intro from './intro/Intro';
 import Promo from './promo/Promo';
 import Info from './info/Info';

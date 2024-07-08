@@ -14,31 +14,6 @@
 		border-top-right-radius: 20px;
 	}
 
-	&::before {
-		content: "";
-		display: block;
-		width: 750px;
-		height: 677px;
-
-		background-image: url("./../assest/images/logos/cat_footer.svg");
-		background-size: 100% 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-
-		position: absolute;
-		bottom: -222px;
-		right: 50%;
-		transform: translateX(136.1%);
-
-		@media (max-width: $MIN-DESKTOP) {
-			width: 375px;
-			height: 340px;
-
-			bottom: -87px;
-			transform: translateX(85.2%);
-		}
-	}
-
 	&__container {
 		padding-top: 80px;
 		padding-bottom: 81px;
@@ -171,6 +146,47 @@
 			margin: 20px auto 14px;
 
 			border-radius: 20px;
+		}
+	}
+
+	&__image {
+		display: block;
+		width: 750px;
+		height: 677px;
+
+		position: absolute;
+		bottom: -222px;
+		right: 50%;
+		transform: translateX(136.1%);
+
+		@media (max-width: $MIN-DESKTOP) {
+			width: 375px;
+			height: 340px;
+
+			bottom: -87px;
+			transform: translateX(85.2%);
+		}
+
+		svg {
+			position: relative;
+
+			.eye {
+				position: relative;
+				transform: translate(0, 0);
+				animation: movementsEye 3s ease infinite;
+			}
+		}
+	}
+
+	@keyframes movementsEye {
+		0% {
+			transform: translate(0, 0);
+		}
+		50% {
+			transform: translate(20px, 13px);
+		}
+		100%{
+			transform: translate(0, 0);
 		}
 	}
 }

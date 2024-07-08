@@ -1,4 +1,7 @@
+import {ReactComponent as CatFooter} from "./../assest/images/logos/cat_footer.svg";
+
 export default function Feedback ({ title }) {
+
 	return (
 		<section className="feedback" id="feedback">
 			<div className="feedback__container container">
@@ -10,6 +13,9 @@ export default function Feedback ({ title }) {
 					</fieldset>
 					<button className="feedback__button" type="button">отправить ⟶</button>
 				</form>
+				<div className="feedback__image">
+					<CatFooter/>
+				</div>
 			</div>
 		</section>
 	);
