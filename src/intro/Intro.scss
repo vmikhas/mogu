@@ -312,10 +312,21 @@
 		border-radius: 16px;
 	
 		&_colleague {
+			z-index: 4;
+
 			margin: 73px auto 0;
 	
 			color: $ginger;
-	
+
+			transition: opacity .8s cubic-bezier(.17,.67,.60,1.5) 1.6s, transform .8s cubic-bezier(.17,.67,.60,1.5) 1.6s;
+
+			opacity: 0;
+			transform: scale(0);
+
+			&.active {
+				opacity: 1;
+				transform: scale(1);
+			}
 			&::after {
 				content: "";
 				display: block;
@@ -341,8 +352,19 @@
 		}
 	
 		&_me {
+			z-index: 2;
 			margin: 130px 0 201px 125px;
-	
+
+			transition: opacity .8s cubic-bezier(.17,.67,.60,1.5), transform .8s cubic-bezier(.17,.67,.60,1.5);
+
+			opacity: 0;
+			transform: scale(0);
+
+			&.active {
+				opacity: 1;
+				transform: scale(1);
+			}
+
 			&::after {
 				content: "";
 				display: block;
@@ -400,30 +422,46 @@
 	
 	&__user-item {
 		position: absolute;
-		left: 17%;
-		z-index: 1;
-	
+
 		width: 100px;
 		height: 100px;
+
+		opacity: 0;
+		transform: scale(0);
+
+		&.active {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		&_0 {
+			left: 17%;
+			z-index: 1;
+			transition: opacity .8s cubic-bezier(.17,.67,.60,1.5), transform .8s cubic-bezier(.17,.67,.60,1.5);
+		}
 	
 		&_1 {
 			left: 30%;
 			z-index: 2;
+			transition: opacity .8s cubic-bezier(.17,.67,.60,1.5) .8s, transform .8s cubic-bezier(.17,.67,.60,1.5) .8s;
 		}
 	
 		&_2 {
 			left: 42%;
 			z-index: 3;
+			transition: opacity .8s cubic-bezier(.17,.67,.60,1.5) 1.6s, transform .8s cubic-bezier(.17,.67,.60,1.5) 1.6s;
 		}
 	
 		&_3 {
 			left: 54%;
 			z-index: 4;
+			transition: opacity .8s cubic-bezier(.17,.67,.60,1.5) 2.4s, transform .8s cubic-bezier(.17,.67,.60,1.5) 2.4s;
 		}
 	
 		&_4 {
 			left: 67%;
 			z-index: 5;
+			transition: opacity .8s cubic-bezier(.17,.67,.60,1.5) 3.2s, transform .8s cubic-bezier(.17,.67,.60,1.5) 3.2s;
 		}
 
 		@media (max-width: $MIN-DESKTOP) {
